@@ -4,66 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
 
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <section class="home">
-        
-    </section>
-    <nav class="w-75 m-auto">
-        <nav class="navbar navbar-expand-lg navbar-dark position-sticky test">
+    <section class="games">
+        <header>
+            <img src="./images/bg-paladins.png" class="w-100" alt="game photo">
+         </header>
+         <nav class="navbar navbar-expand-lg nav-bg position-sticky top-0 z-3 col-md-6 col-lg-9">
             <div class="container">
-                <a href="#" class="navbar-brand"><img src="./images/freetogame-logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a id="" href="" class="nav-link active" aria-current="page">MMORPG</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="" href="" class="nav-link">Shooter</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="" href="" class="nav-link">Strategy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="" href="" class="nav-link">Fighting</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="" href="" class="nav-link">Battle Royale</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="" href="" class="nav-link">Sports</a>
-                        </li>
-                    </ul>
-                </div>
+               <h5 class="navbar-brand mb-0 text-uppercase">
+                  <img src="./images/logo-sm.png" alt="logo photo" style="max-width: 40px"> Game Reviews
+               </h5>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse small navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 menu small">
+                     <li class="nav-item">
+                        <a role="button" class="nav-link active text-uppercase" aria-current="page" data-category="mmorpg">mmorpg</a>
+                     </li>
+                     <li class="nav-item">
+                        <a role="button" class="nav-link text-uppercase" data-category="shooter">shooter</a>
+                     </li>
+                     <li class="nav-item">
+                        <a role="button" class="nav-link text-uppercase" data-category="sailing">sailing</a>
+                     </li>
+                     <li class="nav-item">
+                        <a role="button" class="nav-link text-uppercase" data-category="permadeath">permadeath</a>
+                     </li>
+                     <li class="nav-item">
+                        <a role="button" class="nav-link text-uppercase" data-category="superhero">superhero</a>
+                     </li>
+                     <li class="nav-item">
+                        <a role="button" class="nav-link text-uppercase" data-category="pixel">pixel</a>
+                     </li>
+                  </ul>
+               </div>
             </div>
-        </nav>
-    </nav>
-    <section id="games" class="mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="card">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-                        <div class="card-body">
-                            <span class="badge badge-gt py-2 px-2 float-end">FREE</span>
-                            <h4 class="card-title">Title</h4>
-                            <p class="card-text">Text</p>
+         </nav>
+         <main class="container my-5 home">
+            <section class="position-relative">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4" id="gamesData">
+                    <div class="col">
+                        <div class="card h-100 bg-transparent" role="button">
+                           <div class="card-body">
+                              <figure class="position-relative">
+                                 <img class="card-img-top object-fit-cover" src="https://www.freetogame.com/g/582/thumbnail.jpg">
+                              </figure>
+                  
+                              <figcaption>
+                                 <div class="hstack justify-content-between">
+                                    <h3 class="h6 small">Tarisland</h3>
+                                    <span class="badge text-bg-primary p-2">Free</span>
+                                 </div>
+                                 <p class="card-text small text-center opacity-50">
+                                    A,cross-platform,MMORPG,developed,by,Level,Infinite,and
+                                 </p>
+                              </figcaption>
+                           </div>
+                  
+                           <footer class="card-footer small hstack justify-content-between">
+                              <span class="badge badge-color">MMORPG</span>
+                              <span class="badge badge-color">PC (Windows)</span>
+                           </footer>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="#" class="btn btn-primary">Go somewhere</a></li>
-                        </ul>
-                    </div>
+                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+         </main>
     </section>
     <script src="./scripts/bootstrap.bundle.min.js"></script>
     <!-- <script type="module" src="./scripts/main.js"></script> -->
