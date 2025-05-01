@@ -40,7 +40,7 @@ export class Ui{
                                 <span class="badge text-bg-primary p-2">Free</span>
                                 </div>
                                 <p class="card-text small text-center opacity-50">
-                                    ${result[i].short_description}
+                                    ${result[i].short_description.split(" ", 8)}
                                 </p>
                             </figcaption>
                         </div>
