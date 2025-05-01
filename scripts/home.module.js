@@ -1,4 +1,5 @@
 import {Ui} from './ui.module.js'
+import {Details} from './details.module.js'
 export class Home {
     constructor(){
         this.ui = new Ui();
@@ -7,7 +8,7 @@ export class Home {
         this.details = document.querySelector(".details");
     }
 
-    async display(){
+    async run(){
         await this.ui.display("mmorpg")
         this.cards = document.querySelectorAll(".card");
 
@@ -21,11 +22,14 @@ export class Home {
         }
 
         for(let i = 0; i < this.cards.length; i++){
-            this.cards[i].addEventListener("click", (e) => {
+            this.cards[i].addEventListener("click", async (e) => {
                 const gameId = e.currentTarget.getAttribute("game-id");
                 this.home.classList.add("d-none");
                 this.details.classList.remove("d-none");
                 this.ui.gameDetails(gameId);
+
+                const details = new Details();
+                details.run();
             });
         }
     }
