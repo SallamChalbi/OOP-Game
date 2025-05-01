@@ -2,9 +2,11 @@ export class Ui{
     constructor(){
         this.gamesData = document.getElementById("gamesData");
         this.details = document.getElementById("detailsContent");
+        this.loading = document.querySelector(".loading");
     }
 
     async getAPIData(category){
+        this.loading.classList.remove("d-none");
         const options = {
             method: 'GET',
             headers: {
@@ -15,11 +17,12 @@ export class Ui{
 
         const api = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?category=${category}`, options);
         const response = await api.json();
+        this.loading.classList.add("d-none");
         return response;
     }
     async display(game){
         const result = await this.getAPIData(game);
-        console.log(result);
+        // console.log(result);
         let data = '';
 
         for(let i = 0; i < result.length; i++){
@@ -54,6 +57,8 @@ export class Ui{
     }
 
     async gameDetails(game){
+        this.loading.classList.remove("d-none");
+        this.details.classList.remove("d-none");
         const options = {
             method: 'GET',
             headers: {
@@ -65,7 +70,7 @@ export class Ui{
         const api = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=${game}`, options);
         const response = await api.json();
         // console.log(response);
-        
+        this.loading.classList.add("d-none");
         this.details.innerHTML = `
             <div class="col-md-4">
                <img src="${response.thumbnail}" class="w-100" alt="image details">
